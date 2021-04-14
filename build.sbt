@@ -1,7 +1,5 @@
 name := "todolist"
-
 version := "0.1"
-
 scalaVersion := "2.13.5"
 
 lazy val root = (project in file("."))
@@ -35,5 +33,6 @@ lazy val service = (project in file("service"))
 
 lazy val domain = (project in file("domain"))
   .settings(
-    name := "domain"
+    name := "domain",
+    libraryDependencies ++= Seq(Dependencies.ScalaTest % Test)
   )
