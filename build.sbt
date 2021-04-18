@@ -24,7 +24,7 @@ lazy val usecase = (project in file("todolist/usecase"))
   .settings(
     name := "usecase"
   )
-  .dependsOn(domain)
+  .dependsOn(domain, adapterOnmemory)
 
 lazy val domain = (project in file("todolist/domain"))
   .settings(
