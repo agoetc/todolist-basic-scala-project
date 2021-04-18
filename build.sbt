@@ -13,25 +13,25 @@ lazy val root = (project in file("."))
     domain
   )
 
-lazy val app = (project in file("app"))
+lazy val app = (project in file("todolist/app"))
   .settings(
     name := "app"
   )
   .dependsOn(domain, usecase)
 
-lazy val usecase = (project in file("usecase"))
+lazy val usecase = (project in file("todolist/usecase"))
   .settings(
     name := "usecase"
   )
   .dependsOn(domain)
 
-lazy val service = (project in file("service"))
+lazy val service = (project in file("todolist/service"))
   .settings(
     name := "service"
   )
   .dependsOn(domain)
 
-lazy val domain = (project in file("domain"))
+lazy val domain = (project in file("todolist/domain"))
   .settings(
     name := "domain",
     libraryDependencies ++= Seq(Dependencies.ScalaTest % Test)
