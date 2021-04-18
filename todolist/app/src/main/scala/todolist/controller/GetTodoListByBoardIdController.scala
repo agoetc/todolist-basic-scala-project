@@ -1,6 +1,7 @@
-package todolist
+package todolist.controller
 
 import todolist.todo.board.BoardId
+import todolist.{GetTodoListByBoardIdUsecase, GetTodoListByBoardOutput}
 
 import java.util.UUID
 
