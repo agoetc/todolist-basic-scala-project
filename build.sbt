@@ -9,8 +9,9 @@ lazy val root = (project in file("."))
   .aggregate(
     app,
     usecase,
-    service,
-    domain
+    domain,
+    adapter,
+    adapterOnmemory
   )
 
 lazy val app = (project in file("todolist/app"))
@@ -25,14 +26,20 @@ lazy val usecase = (project in file("todolist/usecase"))
   )
   .dependsOn(domain)
 
-lazy val service = (project in file("todolist/service"))
-  .settings(
-    name := "service"
-  )
-  .dependsOn(domain)
-
 lazy val domain = (project in file("todolist/domain"))
   .settings(
     name := "domain",
     libraryDependencies ++= Seq(Dependencies.ScalaTest % Test)
   )
+
+lazy val adapter = (project in file("todolist/adapter"))
+  .settings(
+    name := "adapter"
+  )
+  .dependsOn(domain)
+
+lazy val adapterOnmemory = (project in file("todolist/adapter/onmemory"))
+  .settings(
+    name := "adapter-onmemory"
+  )
+  .dependsOn(domain)
