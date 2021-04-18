@@ -1,4 +1,4 @@
-package todo.todo
+package todolist.todo.todo
 
 case class TodoTitle(value: String) {
   require(value.length <= 20)

@@ -1,6 +1,6 @@
-package todo.board
+package todolist.todo.board
 
-import auth.User
+import todolist.auth.User
 
 case class Board(
     id: BoardId,

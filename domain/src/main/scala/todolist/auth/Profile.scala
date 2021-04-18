@@ -1,4 +1,4 @@
-package auth
+package todolist.auth
 
 case class Profile(
     id: ProfileId,

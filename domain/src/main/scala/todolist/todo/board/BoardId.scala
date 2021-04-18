@@ -1,4 +1,4 @@
-package todo.board
+package todolist.todo.board
 
 import java.util.UUID
 

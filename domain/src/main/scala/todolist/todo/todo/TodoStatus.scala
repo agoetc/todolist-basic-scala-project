@@ -1,4 +1,4 @@
-package todo.todo
+package todolist.todo.todo
 
 sealed trait TodoStatus
 
